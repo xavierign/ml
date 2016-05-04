@@ -1,10 +1,10 @@
 function [data, quiz] = create_dumm(data_in,quiz_in,var_name, min_num)
-    %var_name= 'VarName5';
-     %min_num = 50;
-     %data_in=data;
-     %quiz_in=quiz;
     
-    %replace low frequency by 'other'
+    % creates dummy variable for a given categorical column variable.
+    % takes as parameter the minumum number of obs. to sumarize in column
+    % 'other'
+
+    % replace low frequency by 'other'
     col= tabulate(categorical(table2cell(data_in(:,var_name))));
     fie = col(cell2mat(col(:,2))>min_num,1);
     
@@ -19,19 +19,18 @@ function [data, quiz] = create_dumm(data_in,quiz_in,var_name, min_num)
         quiz_in(others_id,var_name)=cell2table({'other'});
     end;
     
-    %create dummy in data
+    % create dummy in data
     col = table2cell(data_in(:,var_name));
     col= categorical(col);
     D1 = dummyvar(col);
-    var_name
-    size(D1,2)
+
     data_in = [data_in array2table(D1,'VariableNames',...
                                     strseq([var_name '_'],...
                                     1:size(D1,2)))];
     data_in(:,var_name) =[];
     data=data_in;
 
-    %create dummy in quiz
+    % create dummy in quiz
     col = table2cell(quiz_in(:,var_name));
     col= categorical(col);
     D1 = dummyvar(col);
