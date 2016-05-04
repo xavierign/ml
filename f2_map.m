@@ -3,7 +3,6 @@
 %%%%%%%%%%%%%%%%%%%%%%
 %creates a feature map order 2 of a given numeric dataset
 
-
 function f2_map_data = f2_map(data_in)
     ncol = size(data_in,2);
     f2_map_data = [];

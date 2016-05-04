@@ -1,3 +1,10 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%      MAIN SCRIPT       %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% this is the main script that implements a tree bagger for Kaggle contest
+
+
 %% load the data
 % the loadcvs function has bug so we import the data manually.
 
