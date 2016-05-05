@@ -3,4 +3,16 @@
 
 To address this classification general problems, the receipt is to try a diverse variety of model to get some candidates. Several classification algorithms were tested from the Machine Learning Toolbox. Here are some brief comments about the result.
 
-\textbf{Linear Models}: reusing some functions from previous homework we evaluated a Logistic Regression Model. 
+\textbf{Linear Models}: reusing some functions from previous homework we evaluated a Logistic Regression Model. We used the function \verb|gmlfit| with the fitting function \verb|logit| to shape a binomial distribution.
+The best results obtained for this model were around 7-8\% error.
+
+\textbf{Discriminant Models}: Also reusing some functions from previous homework we evaluated a Linear Discriminant Model and a Quadratic Discriminant Model. We implemented the function \verb|fitcdiscr| with discriminant type as \verb|linear| and \verb|pseudoQuadratic| respectively. Again the resulting error ranged from 7-8\%.
+
+\textbf{SVM Models}: We tried a Support Vector Machine Model with polynomial kernel order 2. This is under the assumption that NLP classification problems are best fitted with the combination of occurrence of two words in a particular text. We implemented the function \verb|fitcsvm| with kernel type as \verb|polynomial| and \verb|PolynomialOrder| equal to 2. Again the resulting error ranged from 7-6.5\%.
+
+\textbf{General Boosting Models}: The Matlab Machine Learning Toolbox offers a wide number of boosting algorithms that we evaluated.
+\verb|AdaBoostM1|, \verb|LogitBoost|, \verb|GentleBoost|, \verb|RobustBoost|. For our binary classification, the best results were obtained with \verb|AdaBoostM1|, with errors arround 6-7\%, followed closely by \verb|LogitBoost|. The other algorithms did not perform well with errors around 9-10\%. Overall this group of algorithms returned acceptable results although the time to train them, when the number of features is in the order of thousands, made them imposible to use in practice.  
+
+The best results were obtained with a \verb|TreeBagger|, the Matlab version of Random Forest. The implementation is explained in next chapter.
+
+
