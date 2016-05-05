@@ -1,4 +1,4 @@
-\chapter{Chapter 2 Overview of the TreeBagger (Random Forest)}
+\chapter{Models considered}
 \label{ch:ch2label}
 Random forests is an ensemble learning method for classification, regression and other tasks, that operate by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes (classification) or mean prediction (regression) of the individual trees. In this application the algorithm was used as a classifier. Random decision forests correct for decision trees' habit of overfitting to their training set. The algorithm for inducing Breiman's random forest was developed by Leo Breiman \citep{breiman2001random}.
  
@@ -14,4 +14,3 @@ The most significant parameters the algorithm takes and their optimal values are
 \textbf{NumTrees}: Scalar value equal to the number of decision. This parameters counts as the number of iterations that the algorithm performs. In theory, and verified with the results, both training and testing error does not increase with the number of iterations as the overfitting is avoided. The values tested were 5-50-100-150-200-250-300-350-500. The best results were obtained with the highest numbers of trees.
 
 \textbf{NumPredictorsToSample}: Number of predictor or feature variables to select at random for each decision split. This is a very relevant parameters to tune. The value tested range from 10 to 200. The optimal value obtained was at 100.
-
