@@ -9,6 +9,9 @@
 % the loadcvs function has bug so we import the data manually.
 
 clear all; clc;
+% the 'ml.mat' file was generated from the provided dataset by using the
+% 'Import' option from the matlab menu. No changes have been made to the
+% original data.
 load('ml.mat');
 
 % remove first row
