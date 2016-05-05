@@ -22,7 +22,7 @@ $\phi(x) := (x_1, x_2, ... , x_d, x_{2,1}, x_{2,2}, ... , x_{2,d}, x_1x_2, x_1x_
 We initially tried this feature map on our algorithms but, unfortunately, it did not yield any improvements which, added to its significant computational cost and the complexity it added to the model, was reason enough for us to discard it.
 
 \subsection{f2 strict map}
- This feature map converts a feature set into a \textit{strictly-order-2} map. That is, only interaction terms between different features are considered. Let $\phi : \mathbb{R}^d -> \mathbb{R}^D$ be the expanded feature mapping given by \newline
+ This feature map converts a feature set into a \textit{strictly-order-2} map. That is, only interaction terms between different features are considered. Let $\phi : \mathbb{R}^d \rightarrow \mathbb{R}^D$ be the expanded feature mapping given by \newline
  \begin{center}
  $\phi(x) := (x_{1,2}, x_{1,3}, ... , x_{1,d}; x_{2,1}, x_{2,3}, ... , x_{2,d}, ... ,x_{d-1,d}) $
  \end{center}
