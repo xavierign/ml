@@ -1,2 +1,6 @@
-\chapter{Appendix A name}\label{ch:appAlabel}
-Here is the first appendix
+\chapter{Considerations on the Source Code}\label{ch:appAlabel}
+
+\begin{enumerate}
+\item The code relies on the 'ml.mat' file, which is provided amongst the source code. This file was generated from the provided dataset by using the 'Import' option from the MATLAB menu, due to a bug with the \textit{loadcsv} built-in function. No changes have been made to the original data.
+\item The code relies on the \textit{strseq} function that creates a sequence of indexed strings. This is part of the \textit{System Identification Toolbox} which he have just found might not be available immediately on all Matlab distributions.
+\end{enumerate}
